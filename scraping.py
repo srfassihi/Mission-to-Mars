@@ -96,13 +96,9 @@ def mars_facts():
     # Convert dataframe into HTML format
     return df.to_html(classes="table table-striped")
 
-if __name__ == "__main__":
-
-    # If running as script, print scraped data
-    print(scrape_all())
-
 ## Hemisphere data 
 def hemispheres(browser):
+    
     # Visit site
     url = 'https://marshemispheres.com/'
     browser.visit(url)
@@ -159,4 +155,11 @@ def hemispheres(browser):
         hemi_list.append(hemi_dict)
     
     return hemi_list
+
+if __name__ == "__main__":
+
+    # If running as script, print scraped data
+    print(scrape_all())
+
+
 
